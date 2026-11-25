@@ -1,0 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body{margin:0;font-family:var(--font),system-ui,sans-serif;overflow-x:hidden}
+.glass{background:rgba(255,255,255,.2);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.4);box-shadow:0 10px 40px rgba(80,0,120,.25)}
+@keyframes floatUp{0%{transform:translateY(105vh) rotate(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-15vh) rotate(40deg);opacity:0}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes burst{0%{transform:translate(-50%,-50%) scale(.3);opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.5);opacity:0}}
+.pop{animation:pop .7s ease both}.beat{animation:beat 1.2s ease-in-out infinite}
